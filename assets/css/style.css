@@ -1,0 +1,33 @@
+.jumbotron {
+	background-image: url("../images/train.jpg") !important;
+	background-size: cover;
+	background-position: center;
+	padding: 100px 0; 
+ }
+
+h1 {
+	color: white;
+	font-size: 120px;
+}
+
+h2 {
+	color: white;
+	font-size: 60px;
+}
+
+.col-lg-6 {
+	margin: 0 auto; 
+}
+
+.card-header {
+	font-size: 20px;
+	background: white;
+}
+
+form {
+	padding: 20px;
+}
+
+.btn {
+	padding: 10px 40px;
+}
