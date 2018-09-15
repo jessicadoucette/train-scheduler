@@ -31,3 +31,47 @@ form {
 .btn {
 	padding: 10px 40px;
 }
+
+#add-train-row {
+	padding-bottom: 50px;
+}
+
+@media screen and (max-width: 990px) {
+	.jumbotron {
+		background-image: url("../images/train.jpg") !important;
+		background-size: cover;
+		background-position: center;
+		padding: 90px 0; 
+	 }
+
+	 h1 {
+		color: white;
+		font-size: 90px;
+	}
+	
+	h2 {
+		color: white;
+		font-size: 50px;
+	}
+	
+}
+
+@media screen and (max-width: 400px) {
+	.jumbotron {
+		background-image: url("../images/train.jpg") !important;
+		background-size: cover;
+		background-position: center;
+		padding: 90px 0; 
+	 }
+
+	 h1 {
+		color: white;
+		font-size: 60px;
+	}
+	
+	h2 {
+		color: white;
+		font-size: 30px;
+	}
+	
+}

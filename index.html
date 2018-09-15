@@ -6,87 +6,90 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Train Scheduler</title>
-		<!-- Firebase Reference -->
-		<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="./assets/css/style.css">
 
-	<!-- Moment.js Reference -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
 	<!-- Favicon -->
 	<head profile="https://jessicadoucette.github.io/train-scheduler/">
-		<link rel="icon" 
-					type="image/ico" 
-					href="./assets/images/favicon.ico">
-</head>
+		<link rel="icon" type="image/ico" href="./assets/images/favicon.ico">
+	</head>
+	<body>
+		<div class="jumbotron text-center">
+			<h1>ALL ABOARD</h1>
+			<h2>Train Scheduler</h2>
+		</div>
 
-<body>
-	<div class="jumbotron text-center">
-		<h1>ALL ABOARD</h1>
-		<h2>Train Scheduler</h2>
-	</div>
-
-	<div class="row">
-		<div class="col-lg-6">
-			<div class="card">
-				<div class="card-header">
-					Current Train Schedule
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						Current Train Schedule
+					</div>
+					<table class="table" id="trainTable">
+						<thead class="thead">
+							<tr>
+								<th scope="col">Train Name</th>
+								<th scope="col">Destination</th>
+								<th scope="col">Frequency</th>
+								<th scope="col">Next Arrival</th>
+								<th scope="col">Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- stuff goes here -->
+						</tbody>
+					</table>
 				</div>
-				<table class="table" id="trainTable">
-					<thead class="thead">
-						<tr>
-							<th scope="col">Train Name</th>
-							<th scope="col">Destination</th>
-							<th scope="col">Frequency</th>
-							<th scope="col">Next Arrival</th>
-							<th scope="col">Minutes Away</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- stuff goes here -->
-					</tbody>
-				</table>
 			</div>
 		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-lg-6">
-			<div class="card">
-				<div class="card-header">
-					Add Train
-				</div>
-				<form>
-					<div class="form-group">
-						<label for="">Train Name</label>
-						<input type="text" class="form-control" id="trainInput">
+		<br>
+		<div class="row" id="add-train-row">
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						Add Train
 					</div>
-					<div class="form-group">
+					<form>
+						<div class="form-group">
+							<label for="">Train Name</label>
+							<input type="text" class="form-control" id="trainInput">
+						</div>
+						<div class="form-group">
 							<label for="">Destination</label>
 							<input type="text" class="form-control" id="destinationInput">
 						</div>
 						<div class="form-group">
-								<label for="">First Train Time (HH:mm - military time)</label>
-								<input type="text" class="form-control" id="timeInput">
-							</div>
-							<div class="form-group">
-									<label for="">Frequency (min)</label>
-									<input type="text" class="form-control" id="frequencyInput">
-								</div>
-					<button type="submit" class="btn btn-danger float-right" id="addTrainBtn">Submit</button>
-				</form>
+							<label for="">First Train Time (HH:mm - military time)</label>
+							<input type="text" class="form-control" id="timeInput">
+						</div>
+						<div class="form-group">
+							<label for="">Frequency (min)</label>
+							<input type="text" class="form-control" id="frequencyInput">
+						</div>
+						<button type="submit" class="btn btn-danger float-right" id="addTrainBtn">Submit</button>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
 
-<script src="./assets/javascript/code.js"></script>
-</body>
+		<!-- Firebase Reference -->
+		<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+
+		<!-- Moment.js Reference -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+		<!-- jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- bootstrap js -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+		<!-- local js -->
+		<script src="./assets/javascript/code.js"></script>
+	</body>
 
 </html>
