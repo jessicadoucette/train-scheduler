@@ -13,3 +13,6 @@ Create a train schedule application that incorporates Firebase to host arrival a
 
 <h2>JS</h2>
 See code for details.
+
+<h2></h2>
+Bonus: added favicon, remove buttons, and table fields can be editable.

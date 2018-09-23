@@ -83,13 +83,13 @@ trainData.ref().on("child_added", function (snapshot) {
 	var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
 	console.log("Arrival time: " + moment(nextTrain).format("hh:mm"));
 
-	//create new row
+	//create new row & make fields editable
 	var newRow = $("<tr>").append(
-		$("<td>").text(name),
-		$("<td>").text(destination),
-		$("<td>").text(frequency),
-		$("<td>").text(nextTrain),
-		$("<td>").text(tMinutesTillTrain),
+		$("<td contenteditable='true'>").text(name),
+		$("<td contenteditable='true'>").text(destination),
+		$("<td contenteditable='true'>").text(frequency),
+		$("<td contenteditable='true'>").text(nextTrain),
+		$("<td contenteditable='true'>").text(tMinutesTillTrain),
 		//adding remove button
 		$("<td>").html("<button class='btn btn-outline-secondary btn-sm text-center' id='removeBtn' value='Delete' onclick='deleteRow(this)' style='padding: 10px 30px;'>"+ "X" + "</button>")
 	);
