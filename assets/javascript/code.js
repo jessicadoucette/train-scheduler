@@ -89,9 +89,23 @@ trainData.ref().on("child_added", function (snapshot) {
 		$("<td>").text(destination),
 		$("<td>").text(frequency),
 		$("<td>").text(nextTrain),
-		$("<td>").text(tMinutesTillTrain)
+		$("<td>").text(tMinutesTillTrain),
+		//adding remove button
+		$("<td>").html("<button class='btn btn-outline-secondary btn-sm text-center' id='removeBtn' value='Delete' onclick='deleteRow(this)' style='padding: 10px 30px;'>"+ "X" + "</button>")
 	);
 	console.log(newRow);
 	// Append the new row to the table
 	$("#trainTable > tbody").append(newRow);
 });
+
+function deleteRow(r) {
+	var row = r.parentNode.parentNode.rowIndex;
+	document.getElementById("trainTable").deleteRow(row);
+}
+
+//remove button functionality
+$("#removeBtn").on("click", function (event) {
+	console.log("remove button works"); 
+	event.preventDefault(); 
+}); 
+
